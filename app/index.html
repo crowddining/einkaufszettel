@@ -1,23 +1,42 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="dcka">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>DCKA14 Einkaufszettel</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  <h1 class="title">Einkaufszettel</h1>
+  <div class="receipt">
+    <div class="holes"></div>
+    <ul class="shopping-list">
+      <li>
+        <div class="row">
+          <div class="col-md-8 item">Kartoffeln</div>
+          <div class="col-md-4 amount">1 Kg</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-md-8 item">Bananen</div>
+          <div class="col-md-4 amount">6 stk.</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-md-8 item">Hähnchenbrust</div>
+          <div class="col-md-4 amount">400g</div>
+        </div>
+      </li>
+      <li class="new"><div class="row">
+        <div class="col-md-8 item"><input type="text" placeholder="Was?" class="form-control input-lg"></div>
+        <div class="col-md-4 amount"><input type="text" placeholder="Wieviel?" class="form-control input-lg"></div>
+      </div></li>
+    </ul>
+  </div>
 
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>

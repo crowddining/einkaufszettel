@@ -2,10 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
+angular.module('dcka.controllers', []).
   controller('MyCtrl1', [function() {
 
   }])
-  .controller('MyCtrl2', [function() {
-
-  }]);

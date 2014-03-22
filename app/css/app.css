@@ -1,30 +1,68 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+	background: url(../img/pattern.jpg) repeat;
+	font-family: 'Vollkorn', serif;
 }
 
-.menu:before {
-  content: "[";
+h1.title {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #333;
+	font-size: 30pt;
+	top: 100px;
 }
 
-.menu:after {
-  content: "]";
+.receipt {
+	width: 500px;
+	margin: 200px auto;
 }
 
-.menu > li {
-  display: inline;
+.holes {
+	width: 100%;
+	height: 39px;
+	background: url(../img/hole.svg) repeat-x;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+.shopping-list {
+	list-style-type: none;
+	background: white;
+	padding: 0;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.shopping-list li {
+	padding: 20px 0;
+	font-size: 20pt;
+	border-bottom: 1px solid #eee;
 }
+
+.shopping-list li .row {
+	padding-left: 20px;
+}
+
+.shopping-list li.new .row {
+	padding-left: 0;
+}
+
+.shopping-list li.new {
+	padding: 0;
+	height: 79px;
+}
+
+.shopping-list li.new .input-lg {
+	height: 79px;
+	border: none;
+	border-radius: 0;
+	font-size: 20pt;
+	padding: 0 20px;
+}
+
+.shopping-list li.new .row .col-md-8 {
+	padding-right: 0;
+}
+
+.shopping-list li.new .row .col-md-4 {
+	padding-left: 0;
+	border-left: 1px solid #eee;
+}
+
