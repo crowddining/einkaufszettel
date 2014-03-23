@@ -49,7 +49,7 @@ h1.title {
 	height: 79px;
 }
 
-.shopping-list li.new .input-lg {
+.input-lg {
 	height: 79px;
 	border: none;
 	border-radius: 0;
@@ -57,12 +57,43 @@ h1.title {
 	padding: 0 20px;
 }
 
-.shopping-list li.new .row .col-md-8 {
+.shopping-list li.new .row .col-md-8,
+.editing .shopping-list li .row .col-md-8 {
 	padding-right: 0;
 }
 
-.shopping-list li.new .row .col-md-4 {
+.shopping-list li.new .row .col-md-4,
+.editing .shopping-list li .row .col-md-8 {
 	padding-left: 0;
 	border-left: 1px solid #eee;
 }
 
+.delete {
+	color: #bbb;
+	left: -25px;
+	cursor: pointer;
+}
+
+.delete:hover {
+	color: #333;
+}
+
+.delete:focus, .delete:active {
+	color: black;
+}
+
+.edit {
+	display: none;
+}
+
+.shopping-list li.editing {
+	padding: 0;
+}
+
+.editing .edit {
+	display: block;
+}
+
+.editing .note {
+	display: none;
+}

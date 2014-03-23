@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var Note = require('./models/Note');
 var mongoose = require('mongoose');
+var path = require('path');
 
 mongoose.connect('localhost/note');
 mongoose.connection.on('error', function(err) {
@@ -16,6 +17,7 @@ app.use(function(err, req, res, next) {
 
 app.use(express.errorHandler());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, 'app')));
 
 app.get('/note', function(req, res, next) {
 	Note.find({}, function(err,notes) {
@@ -36,15 +38,17 @@ app.post('/note', function(req, res, next) {
 	})
 });
 
-app.put('/note/:id', function(req, res, next) {
+app.put('/note', function(req, res, next) {
 	var note = {
 		item: req.body.item,
 		amount: req.body.amount
 	};
 
-	Note.findByIdAndUpdate(req.params.id, note, function(err, note) {
+	Note.findByIdAndUpdate(req.body._id, note, function(err, note) {
 		if (err) return next(err);
-		res.send(note);
+		Note.find({}, function(err, notes) {
+			res.send(notes);
+		})
 	});
 })
 

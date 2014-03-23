@@ -1,0 +1,16 @@
+<h1 class="title">Einkaufszettel</h1>
+<div class="receipt">
+  <div class="holes"></div>
+  <ul class="shopping-list">
+    <li ng-repeat="note in notes">
+      <div class="row">
+        <div class="col-md-8 item">{{note.item}}</div>
+        <div class="col-md-4 amount">{{note.amount}}</div>
+      </div>
+    </li>
+    <li class="new"><div class="row">
+      <div class="col-md-8 item"><input type="text" placeholder="Was?" class="form-control input-lg"></div>
+      <div class="col-md-4 amount"><input type="text" placeholder="Wieviel?" class="form-control input-lg"></div>
+    </div></li>
+  </ul>
+</div>

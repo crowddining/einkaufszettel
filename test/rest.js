@@ -48,7 +48,7 @@ describe('note', function() {
 	it('should update a note', function(done) {
 		newNote.item = 'Trauben';
 		request(app)
-			.put('/note/' + newNote._id)
+			.put('/note')
 			.send(newNote)
 			.expect(200)
 			.end(function(err, res) {
