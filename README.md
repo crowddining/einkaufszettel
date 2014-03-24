@@ -6,3 +6,4 @@ It demonstrates, how easy it is to build a CRUD api with Mongoose/Express and ho
 
 Screenshot:
 
+['screenshot'](https://raw.githubusercontent.com/crowddining/einkaufszettel/master/screenshot.png)
